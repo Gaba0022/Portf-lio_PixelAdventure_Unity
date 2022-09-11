@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 1156449637}
   - component: {fileID: 1156449636}
   - component: {fileID: 1156449638}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27840,7 +27840,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.214, y: 0.24}
+  m_Size: {x: 0.214, y: 0.23}
   m_EdgeRadius: 0
 --- !u!212 &2064091394
 SpriteRenderer:
