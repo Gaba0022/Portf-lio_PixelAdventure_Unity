@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer rend;
-    public float speed;
+    public float speed, jumpForce = 0f;
     private float inputHorizontal;
 
     // Start is called before the first frame update
@@ -26,7 +26,8 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(inputHorizontal, 0) * speed;
+        rb.velocity = new Vector2(inputHorizontal * speed, rb.velocity.y);
+        
     }
     private void Inputs()
     {
@@ -44,7 +45,11 @@ public class Player : MonoBehaviour
                 rend.flipX = true;
             }
         }
-        Debug.Log(rend.flipX);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        }
+
     }
 
     private void VerificationAnimator()
